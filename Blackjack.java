@@ -87,14 +87,6 @@ public class Blackjack {
 
     public static boolean sePasoDe21(){
         String mano = String.valueOf(0);
-
-        /*if(obtenerValorDeMano(Collections.singletonList((mano))) > 21){
-            return  true;
-        }else{
-            return false;
-        }*/
-
-        // Una forma de simplificar el if else anterior es con el siguiente retorno:
         return obtenerValorDeMano(Collections.singletonList((mano))) > 21;
     }
 
@@ -158,7 +150,7 @@ public class Blackjack {
         verificarGanador();
         crearMano();
         barajar();
-        obtenerValoresCartas(obtenerValoresDeCartas[i]);
+        obtenerValoresCartas();
         crearMapa();
         jugar();
         mostrarMenu();
